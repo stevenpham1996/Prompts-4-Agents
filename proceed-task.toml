@@ -1,0 +1,11 @@
+description = "Prompt to execute a multi-task plan, TASK-BY-TASK"
+prompt = """
+### Task Description: Analyze thoroughly to ensure a clear understanding of the above refacor checklist plan, then start implementing the outlined Tasks in the "3.3. Detailed Action Plan / Phases" section, ONE BY ONE.
+#### Task Notes:
+1. You are required to strictly adhere the task execution rules outlined in @prompts/checklist-execution-rules.md
+2. You are equipped with the available tools from the MCP server "chrome-devtools-mcp", which collectively give you full access to the Chrome DevTools to control and inspect a live Chrome browser. ALWAYS call the appropriate tools at the URL "http://localhost:3000/us/texas/houston" after completing a task to check for error console logs and subsequent debugging until your code implementation is verified as working correctly as expected
+### Reminders:
+1. Make sure to always be surgical with your implementation by work on one task/subtask at a time and don't take too large chunks of work in one go.
+2. Do NOT overwrite the entire file or very large chunk of code to avoid unintentional broken/altered code.
+3. Always mark the completed subtask as "[x]" in the refactor checklist plan to keep track of your previous work, and update the task progress tracker document @dev-docs/refactor-plans/ongoing/refactor_filter-UI-for-ramen.md to keep track of your current progress.
+"""
