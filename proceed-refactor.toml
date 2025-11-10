@@ -1,6 +1,6 @@
 description = "Prompt to execute a refactor plan"
 prompt = """
-### Task Description: Analyze thoroughly to ensure a clear understanding of the above refacor checklist plan, then start implementing the outlined Tasks in the "3.3. Detailed Action Plan / Phases" section, ONE BY ONE.
+### Task Description: Analyze thoroughly to ensure a clear understanding of the above refacor checklist plan, then start implementing the outlined Tasks in the "Detailed Action Plan / Phases" section, ONE BY ONE.
 #### Reminders:
 1. Make sure to always be surgical with your implementation by work on one task/subtask at a time and don't take too large chunks of work in one go.
 2. Do NOT overwrite the entire file or very large chunk of code to avoid unintentional broken/altered code.

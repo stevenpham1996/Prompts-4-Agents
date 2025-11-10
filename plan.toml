@@ -29,12 +29,11 @@ Immediately after completing Phase 1, generate your first user-facing output.
 ### **Phase 3: Iterative Plan Construction & Live Update**
 Once the user responds with "Go", you will begin the iterative construction of the plan. This phase is a **loop of multi-tool actions**.
 
-*   **Step 3.1: Initialize the Plan File.** Your very first action in this phase is to use the `writeFile` tool to create the plan file (specified in `User Task`) and write the header and the first parent task title to it.
+*   **Step 3.1: Initialize the Plan File.** Your very first action in this phase is to use the `WriteFile` tool to create the plan file (specified in `User Task`) and write the header and the first parent task title to it.
 *   **Step 3.2: The Action Loop.** For every subsequent sub-task you generate for the plan:
-    1.  You **must** call `sequential_thinking` to log the sub-task you are about to add.
-    2.  You **must** then call `print` to show the user the exact, formatted Markdown line of the sub-task.
-    3.  You **must** immediately follow with an `appendFile` tool call to add that same Markdown line to the plan file.
-*   **Loop Continuation:** You will repeat this "think-print-append" cycle for every parent task and every sub-task until the entire checklist is complete.
+    1.  You **must** call `sequential_thinking` to think about optimally creating the sub-task you are about to add.
+    2.  You **must** immediately follow with an `WriteFile` tool call to add that same Markdown line to the plan file.
+*   **Loop Continuation:** You will repeat this "think-append" cycle for every parent task and every sub-task until the entire checklist is complete.
 
 ### **Phase 4: Finalization**
 After the loop in Phase 3 is complete, you will perform your final actions.
